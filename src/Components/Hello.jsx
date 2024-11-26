@@ -1,6 +1,6 @@
-function Hello({name, message}){
+function Hello({person}){
     return <div>
-        <h1>{message} {name}</h1>
+        <h1>{person.message} {person.name} {person.seatNumbers}</h1>
         <h3>SEU</h3>
     </div> ;
 }
