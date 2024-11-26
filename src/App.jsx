@@ -1,4 +1,5 @@
 import Hello from './Components/Hello';
+import Fruites from './Components/Fruites';
 
 function App() {
 const seatNumbers = [1,7,4];
@@ -10,6 +11,7 @@ const person = {
   return (
     <div className="App">
       <Hello  person={person}/>
+      <Fruites />
     </div>
   )
 }
