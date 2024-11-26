@@ -1,6 +1,6 @@
-function Hello(props){
+function Hello({name, message}){
     return <div>
-        <h1>{props.message} {props.name}</h1>
+        <h1>{message} {name}</h1>
         <h3>SEU</h3>
     </div> ;
 }
