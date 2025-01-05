@@ -1,3 +1,9 @@
+import style from './todoItem.module.css';
 export default function Todoitem({item}){
-    return <h2 key={item}>{item}</h2>
+    return <div className={style.item} key={item}>
+        <div className={style.itemName}>
+        {item}
+        </div>
+        <hr className={style.line} />
+        </div>
 }
