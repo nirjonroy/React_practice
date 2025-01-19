@@ -4,6 +4,7 @@ import ConditionalComponent from './Components/ConditionalComponent';
 import Message from './Components/Message';
 import Counter from './Components/Counter';
 import Form from './Components/Form';
+import Reducer from './Components/Reducer';
 
 function App() {
 const seatNumbers = [1,7,4];
@@ -14,12 +15,13 @@ const person = {
 }
   return (
     <div className="App">
-      <Hello  person={person}/>
+      <Reducer />
+      {/* <Hello  person={person}/>
       <Fruites />
       <ConditionalComponent />
       <Message />
       <Counter />
-      <Form />
+      <Form /> */}
     </div>
   )
 }
