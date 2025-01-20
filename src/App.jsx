@@ -10,6 +10,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './Pages/HomePage';
 import Dashboard from './Pages/Dashboard';
 import PageNotFound from './Pages/PageNotFound';
+import Nav from './Nav';
 
 function App() {
 // const seatNumbers = [1,7,4];
@@ -20,12 +21,14 @@ function App() {
 // }
   return (
     <BrowserRouter>
+    <Nav />
       <Routes>
         <Route path="/" element={<HomePage />}/>
         <Route path="/Dashboard" element={<Dashboard />}/>
         <Route path="*" element={<PageNotFound />}/>
       </Routes>
     </BrowserRouter>
+    
 
     // <div className="App">
     //   <BankOperation />

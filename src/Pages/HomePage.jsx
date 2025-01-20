@@ -1,5 +1,9 @@
+import { Link } from "react-router-dom";
+
 export default function HomePage(){
     return (
-        <div>HomePage</div>
+        <div>HomePage
+            <Link to="./dashboard">Dashboard</Link>
+        </div>
     )
 }
