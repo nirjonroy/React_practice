@@ -11,6 +11,8 @@ import HomePage from './Pages/HomePage';
 import Dashboard from './Pages/Dashboard';
 import PageNotFound from './Pages/PageNotFound';
 import Nav from './Nav';
+import Profile from './Pages/Profile';
+import Settings from './Pages/Settings';
 
 function App() {
 // const seatNumbers = [1,7,4];
@@ -24,7 +26,10 @@ function App() {
     <Nav />
       <Routes>
         <Route path="/" element={<HomePage />}/>
-        <Route path="/Dashboard" element={<Dashboard />}/>
+       <Route path="/Dashboard" element={<Dashboard />}>
+  <Route path="profile" element={<Profile />} />
+  <Route path="settings" element={<Settings />} />
+</Route>
         <Route path="*" element={<PageNotFound />}/>
       </Routes>
     </BrowserRouter>

@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 export default function Dashboard(){
     return (
         <div>Dashboard 
-            <Link to="/">Home</Link>
+            <Link to="profile">profile</Link>
+            <Link to="settings">settings</Link>
+            <Outlet />
         </div>
     )
 }
