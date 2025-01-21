@@ -14,17 +14,29 @@ import Nav from './Nav';
 import Profile from './Pages/Profile';
 import Settings from './Pages/Settings';
 import Products from './Pages/Products';
-
+import { createContext, useState } from "react"
+import Checkout from './Checkout';
+import Login from './Login';
+export const userContext = createContext();
 function App() {
+  const [user, setUser] = useState("guest");
 // const seatNumbers = [1,7,4];
 // const person = {
 //   name : "Nirjon Roy",
 //   message : "Hay there! this is : ",
 //   seatNumbers : [1,7,4],
 // }
+
   return (
     <BrowserRouter>
     <Nav />
+    {/* <input type="text" name="" value={user} onChange={(e=> setUser(e.target.value))} id="" /> */}
+    
+    <userContext.Provider value={{user, setUser}}>
+    <Login />
+    <Checkout />
+    </userContext.Provider>
+    
       <Routes>
         <Route path="/" element={<HomePage />}/>
         <Route path="/products/:id" element={<Products />}/>
